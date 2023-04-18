@@ -32,7 +32,7 @@ function EventDetailPage() {
 export default EventDetailPage;
 
 async function loadEvent(id) {
-  const response = await fetch('http://localhost:8080/events/' + id);
+  const response = await fetch('https://firebase.google.com/docs/reference/rest/auth#section-sign-in-email-password' + id);
 
   if (!response.ok) {
     throw json(
@@ -78,7 +78,7 @@ export async function loader({ request, params }) {
 
 export async function action({ params, request }) {
   const eventId = params.eventId;
-  const response = await fetch('http://localhost:8080/events/' + eventId, {
+  const response = await fetch('https://firebase.google.com/docs/reference/rest/auth#section-sign-in-email-password' + eventId, {
     method: request.method,
   });
 
